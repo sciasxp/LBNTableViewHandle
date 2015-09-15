@@ -10,9 +10,10 @@
 		0541E10DB245E68DC3E99036DE89A02C /* LBNTableViewHandle-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EF3D0F18B3FF4542FD55325B6DE4179 /* LBNTableViewHandle-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		054CED88317D8D8F91A0DB7240A570CD /* LBNTableViewHandle-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21935BAA6050158FA88D971702C43253 /* LBNTableViewHandle-dummy.m */; };
 		0F37E2C2304FA2163255EB5E8882FC26 /* LBNTableViewHandle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E7549B6E35D04CB3BAAE42DA584A389C /* LBNTableViewHandle.bundle */; };
-		1EFDB846035A951B5C736D9111A84E28 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 16912143D7B6912D037EAD9B1106C053 /* ReplaceMe.m */; };
 		5014AED6E7CCA7C376078F0A1E0960AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 123591E783C965534C852B52F198E711 /* Foundation.framework */; };
 		B500627C046ABF307688BBA34999AEC0 /* Pods-LBNTableViewHandle_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C70D0B4B605727A89DF677E11A5F88 /* Pods-LBNTableViewHandle_Tests-dummy.m */; };
+		BE2567C41BA8BB12005E3627 /* TableViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = BE2567C21BA8BB12005E3627 /* TableViewDataSource.h */; };
+		BE2567C51BA8BB12005E3627 /* TableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2567C31BA8BB12005E3627 /* TableViewDataSource.m */; };
 		E6ECABD1CC49E6D499FC5EF81ED64CD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 123591E783C965534C852B52F198E711 /* Foundation.framework */; };
 		FB5262F4BD58A02F382CCB993638DAF8 /* Pods-LBNTableViewHandle_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 349A89734D563EEB99D1FC6AB714138F /* Pods-LBNTableViewHandle_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -38,7 +39,6 @@
 		025B160D513DF22ED9D3FA8DD7594E62 /* LBNTableViewHandle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LBNTableViewHandle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB3A889B42C7381CBEA0AA97CD65670 /* Pods-LBNTableViewHandle_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LBNTableViewHandle_Tests-resources.sh"; sourceTree = "<group>"; };
 		123591E783C965534C852B52F198E711 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		16912143D7B6912D037EAD9B1106C053 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
 		21935BAA6050158FA88D971702C43253 /* LBNTableViewHandle-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LBNTableViewHandle-dummy.m"; sourceTree = "<group>"; };
 		286805009DCF39A62998733D759D72C2 /* LBNTableViewHandle.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LBNTableViewHandle.modulemap; sourceTree = "<group>"; };
 		2C48DEB3A617B4C539144D543EA88F1A /* LBNTableViewHandle-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "LBNTableViewHandle-Private.xcconfig"; sourceTree = "<group>"; };
@@ -55,6 +55,8 @@
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BC6247F6DFFF81CC6B38344262B8C04A /* Pods_LBNTableViewHandle_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LBNTableViewHandle_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCCA6318B21A1638CB497744F5E6A3A3 /* Pods-LBNTableViewHandle_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LBNTableViewHandle_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BE2567C21BA8BB12005E3627 /* TableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDataSource.h; sourceTree = "<group>"; };
+		BE2567C31BA8BB12005E3627 /* TableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewDataSource.m; sourceTree = "<group>"; };
 		E7549B6E35D04CB3BAAE42DA584A389C /* LBNTableViewHandle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LBNTableViewHandle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF025C83E671EBE4CFEF1E9897DB16CE /* LBNTableViewHandle.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LBNTableViewHandle.xcconfig; sourceTree = "<group>"; };
 		F4BDE83CABE76ED0F25EC39FC57B4532 /* Pods-LBNTableViewHandle_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LBNTableViewHandle_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,7 +139,8 @@
 		941096BF016FDD3729961C6C25F5F4E4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				16912143D7B6912D037EAD9B1106C053 /* ReplaceMe.m */,
+				BE2567C21BA8BB12005E3627 /* TableViewDataSource.h */,
+				BE2567C31BA8BB12005E3627 /* TableViewDataSource.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0541E10DB245E68DC3E99036DE89A02C /* LBNTableViewHandle-umbrella.h in Headers */,
+				BE2567C41BA8BB12005E3627 /* TableViewDataSource.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,8 +330,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE2567C51BA8BB12005E3627 /* TableViewDataSource.m in Sources */,
 				054CED88317D8D8F91A0DB7240A570CD /* LBNTableViewHandle-dummy.m in Sources */,
-				1EFDB846035A951B5C736D9111A84E28 /* ReplaceMe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,6 +5,15 @@
 [![License](https://img.shields.io/cocoapods/l/LBNTableViewHandle.svg?style=flat)](http://cocoapods.org/pods/LBNTableViewHandle)
 [![Platform](https://img.shields.io/cocoapods/p/LBNTableViewHandle.svg?style=flat)](http://cocoapods.org/pods/LBNTableViewHandle)
 
+## Installation
+
+LBNTableViewHandle is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod "LBNTableViewHandle"
+```
+
 ## Usage
 
 Include the file LBNTableViewHandle.h in your class:
@@ -44,15 +53,6 @@ self.mainTableView.delegate = self.mainTableViewHandle;
 ## Observations
 
 You can use this class to simplefy your code in case you need to use tableview inside another tableview. Simple crete to instances of LBNTableViewHandle and attibute then to the respective table datasource and delegate.
-
-## Installation
-
-LBNTableViewHandle is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod "LBNTableViewHandle"
-```
 
 ## Author
 

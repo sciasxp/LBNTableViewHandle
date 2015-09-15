@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "LBNTableViewHandle"
-  s.version          = "0.0.1"
+  s.version          = "0.0.2"
   s.summary          = "A Small implementation for TableView dalegate and datasource that will handle most of the boiler plate code."
 
 # This description is used to generate tags and improve search results.

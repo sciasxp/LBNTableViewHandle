@@ -1,0 +1,618 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0541E10DB245E68DC3E99036DE89A02C /* LBNTableViewHandle-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EF3D0F18B3FF4542FD55325B6DE4179 /* LBNTableViewHandle-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		054CED88317D8D8F91A0DB7240A570CD /* LBNTableViewHandle-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21935BAA6050158FA88D971702C43253 /* LBNTableViewHandle-dummy.m */; };
+		0F37E2C2304FA2163255EB5E8882FC26 /* LBNTableViewHandle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E7549B6E35D04CB3BAAE42DA584A389C /* LBNTableViewHandle.bundle */; };
+		1EFDB846035A951B5C736D9111A84E28 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 16912143D7B6912D037EAD9B1106C053 /* ReplaceMe.m */; };
+		5014AED6E7CCA7C376078F0A1E0960AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 123591E783C965534C852B52F198E711 /* Foundation.framework */; };
+		B500627C046ABF307688BBA34999AEC0 /* Pods-LBNTableViewHandle_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C70D0B4B605727A89DF677E11A5F88 /* Pods-LBNTableViewHandle_Tests-dummy.m */; };
+		E6ECABD1CC49E6D499FC5EF81ED64CD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 123591E783C965534C852B52F198E711 /* Foundation.framework */; };
+		FB5262F4BD58A02F382CCB993638DAF8 /* Pods-LBNTableViewHandle_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 349A89734D563EEB99D1FC6AB714138F /* Pods-LBNTableViewHandle_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		280BCB54EBABCF485833A43F9479B013 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E5E0BF4675AE2D2578CA63BE7396311;
+			remoteInfo = LBNTableViewHandle;
+		};
+		B291995F8264268EBFBFA327652EE8DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA1858147E8F2BE16DF9E0E354251DFA;
+			remoteInfo = "LBNTableViewHandle-LBNTableViewHandle";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		025B160D513DF22ED9D3FA8DD7594E62 /* LBNTableViewHandle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LBNTableViewHandle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EB3A889B42C7381CBEA0AA97CD65670 /* Pods-LBNTableViewHandle_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LBNTableViewHandle_Tests-resources.sh"; sourceTree = "<group>"; };
+		123591E783C965534C852B52F198E711 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		16912143D7B6912D037EAD9B1106C053 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
+		21935BAA6050158FA88D971702C43253 /* LBNTableViewHandle-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LBNTableViewHandle-dummy.m"; sourceTree = "<group>"; };
+		286805009DCF39A62998733D759D72C2 /* LBNTableViewHandle.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LBNTableViewHandle.modulemap; sourceTree = "<group>"; };
+		2C48DEB3A617B4C539144D543EA88F1A /* LBNTableViewHandle-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "LBNTableViewHandle-Private.xcconfig"; sourceTree = "<group>"; };
+		349A89734D563EEB99D1FC6AB714138F /* Pods-LBNTableViewHandle_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LBNTableViewHandle_Tests-umbrella.h"; sourceTree = "<group>"; };
+		5B5AB31364F661F5B5727428AD7D8127 /* Pods-LBNTableViewHandle_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LBNTableViewHandle_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		5EF3D0F18B3FF4542FD55325B6DE4179 /* LBNTableViewHandle-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LBNTableViewHandle-umbrella.h"; sourceTree = "<group>"; };
+		62DC9FF3F4441CFFC55AC85BE1FA1937 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7067740480722247FEF9E1A50F68E67A /* LBNTableViewHandle-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LBNTableViewHandle-prefix.pch"; sourceTree = "<group>"; };
+		8C8C3A2C5E6923D3DDF44A1C85E2264C /* Pods-LBNTableViewHandle_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LBNTableViewHandle_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A21E307DC01717E6BEDDC180201BF934 /* Pods-LBNTableViewHandle_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LBNTableViewHandle_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		A2C8FF80DF788298762EFF4839E090C6 /* Pods-LBNTableViewHandle_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LBNTableViewHandle_Tests.modulemap"; sourceTree = "<group>"; };
+		B4E42A426F23E285EE6C04F9500BB35F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9C70D0B4B605727A89DF677E11A5F88 /* Pods-LBNTableViewHandle_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LBNTableViewHandle_Tests-dummy.m"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BC6247F6DFFF81CC6B38344262B8C04A /* Pods_LBNTableViewHandle_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LBNTableViewHandle_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCCA6318B21A1638CB497744F5E6A3A3 /* Pods-LBNTableViewHandle_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LBNTableViewHandle_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E7549B6E35D04CB3BAAE42DA584A389C /* LBNTableViewHandle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LBNTableViewHandle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF025C83E671EBE4CFEF1E9897DB16CE /* LBNTableViewHandle.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LBNTableViewHandle.xcconfig; sourceTree = "<group>"; };
+		F4BDE83CABE76ED0F25EC39FC57B4532 /* Pods-LBNTableViewHandle_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LBNTableViewHandle_Tests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05E36593AC7B227CD232A6ECB3379A34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AE10C007F920D52E923E15A7B5DB69A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5014AED6E7CCA7C376078F0A1E0960AC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2BE838048F864B24265AD8E9959874C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6ECABD1CC49E6D499FC5EF81ED64CD1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3318D5AF24D684FB63B9C978A64C06BF /* LBNTableViewHandle */ = {
+			isa = PBXGroup;
+			children = (
+				AD92849589B393EB6D0AE6E3F761D65A /* Pod */,
+				A15131165B7C2FCE976FB30F39FB98A4 /* Support Files */,
+			);
+			name = LBNTableViewHandle;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				123591E783C965534C852B52F198E711 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				A60A4DBE912F100D4F631FB379B144A6 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				A3833EE4325152C4B220E643A53C911C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8F2181E0B4FE504E42998081EFCCA4C4 /* Pods-LBNTableViewHandle_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				62DC9FF3F4441CFFC55AC85BE1FA1937 /* Info.plist */,
+				A2C8FF80DF788298762EFF4839E090C6 /* Pods-LBNTableViewHandle_Tests.modulemap */,
+				BCCA6318B21A1638CB497744F5E6A3A3 /* Pods-LBNTableViewHandle_Tests-acknowledgements.markdown */,
+				A21E307DC01717E6BEDDC180201BF934 /* Pods-LBNTableViewHandle_Tests-acknowledgements.plist */,
+				B9C70D0B4B605727A89DF677E11A5F88 /* Pods-LBNTableViewHandle_Tests-dummy.m */,
+				5B5AB31364F661F5B5727428AD7D8127 /* Pods-LBNTableViewHandle_Tests-frameworks.sh */,
+				0EB3A889B42C7381CBEA0AA97CD65670 /* Pods-LBNTableViewHandle_Tests-resources.sh */,
+				349A89734D563EEB99D1FC6AB714138F /* Pods-LBNTableViewHandle_Tests-umbrella.h */,
+				8C8C3A2C5E6923D3DDF44A1C85E2264C /* Pods-LBNTableViewHandle_Tests.debug.xcconfig */,
+				F4BDE83CABE76ED0F25EC39FC57B4532 /* Pods-LBNTableViewHandle_Tests.release.xcconfig */,
+			);
+			name = "Pods-LBNTableViewHandle_Tests";
+			path = "Target Support Files/Pods-LBNTableViewHandle_Tests";
+			sourceTree = "<group>";
+		};
+		941096BF016FDD3729961C6C25F5F4E4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				16912143D7B6912D037EAD9B1106C053 /* ReplaceMe.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A15131165B7C2FCE976FB30F39FB98A4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B4E42A426F23E285EE6C04F9500BB35F /* Info.plist */,
+				286805009DCF39A62998733D759D72C2 /* LBNTableViewHandle.modulemap */,
+				EF025C83E671EBE4CFEF1E9897DB16CE /* LBNTableViewHandle.xcconfig */,
+				2C48DEB3A617B4C539144D543EA88F1A /* LBNTableViewHandle-Private.xcconfig */,
+				21935BAA6050158FA88D971702C43253 /* LBNTableViewHandle-dummy.m */,
+				7067740480722247FEF9E1A50F68E67A /* LBNTableViewHandle-prefix.pch */,
+				5EF3D0F18B3FF4542FD55325B6DE4179 /* LBNTableViewHandle-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/LBNTableViewHandle";
+			sourceTree = "<group>";
+		};
+		A3833EE4325152C4B220E643A53C911C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F2181E0B4FE504E42998081EFCCA4C4 /* Pods-LBNTableViewHandle_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A60A4DBE912F100D4F631FB379B144A6 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3318D5AF24D684FB63B9C978A64C06BF /* LBNTableViewHandle */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		AD92849589B393EB6D0AE6E3F761D65A /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				941096BF016FDD3729961C6C25F5F4E4 /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7549B6E35D04CB3BAAE42DA584A389C /* LBNTableViewHandle.bundle */,
+				025B160D513DF22ED9D3FA8DD7594E62 /* LBNTableViewHandle.framework */,
+				BC6247F6DFFF81CC6B38344262B8C04A /* Pods_LBNTableViewHandle_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5A9C71094DCB764EA224B24082103BAA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0541E10DB245E68DC3E99036DE89A02C /* LBNTableViewHandle-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC0352C353A3834CDA4ACE60327297B1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB5262F4BD58A02F382CCB993638DAF8 /* Pods-LBNTableViewHandle_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8E5E0BF4675AE2D2578CA63BE7396311 /* LBNTableViewHandle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AC44A253DE1988D558BF5058512A5F4 /* Build configuration list for PBXNativeTarget "LBNTableViewHandle" */;
+			buildPhases = (
+				08BD31351BC1B6B92C47D731241A5232 /* Sources */,
+				E2BE838048F864B24265AD8E9959874C /* Frameworks */,
+				435477DAC7B43E7D4ABA30D1BAE07EA0 /* Resources */,
+				5A9C71094DCB764EA224B24082103BAA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FF64AA108B714FBF37CE00E3D21F481 /* PBXTargetDependency */,
+			);
+			name = LBNTableViewHandle;
+			productName = LBNTableViewHandle;
+			productReference = 025B160D513DF22ED9D3FA8DD7594E62 /* LBNTableViewHandle.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DA1858147E8F2BE16DF9E0E354251DFA /* LBNTableViewHandle-LBNTableViewHandle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E51B089F6D3A30CF9EEE1848E36BBB32 /* Build configuration list for PBXNativeTarget "LBNTableViewHandle-LBNTableViewHandle" */;
+			buildPhases = (
+				FA9C54A436529181D1CE42E4C82610BE /* Sources */,
+				05E36593AC7B227CD232A6ECB3379A34 /* Frameworks */,
+				F508FCB33495BCB8358006D50C8CD1F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LBNTableViewHandle-LBNTableViewHandle";
+			productName = "LBNTableViewHandle-LBNTableViewHandle";
+			productReference = E7549B6E35D04CB3BAAE42DA584A389C /* LBNTableViewHandle.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		EE29CBFB378BCAF449B9561B1B0DEDAA /* Pods-LBNTableViewHandle_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA898F20621076256FFF7DF661BB525A /* Build configuration list for PBXNativeTarget "Pods-LBNTableViewHandle_Tests" */;
+			buildPhases = (
+				EC5301FD274B1EF393F5AF3CFFED458D /* Sources */,
+				9AE10C007F920D52E923E15A7B5DB69A /* Frameworks */,
+				CC0352C353A3834CDA4ACE60327297B1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				877B7F86FA59EF3983598408A114045D /* PBXTargetDependency */,
+			);
+			name = "Pods-LBNTableViewHandle_Tests";
+			productName = "Pods-LBNTableViewHandle_Tests";
+			productReference = BC6247F6DFFF81CC6B38344262B8C04A /* Pods_LBNTableViewHandle_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E5E0BF4675AE2D2578CA63BE7396311 /* LBNTableViewHandle */,
+				DA1858147E8F2BE16DF9E0E354251DFA /* LBNTableViewHandle-LBNTableViewHandle */,
+				EE29CBFB378BCAF449B9561B1B0DEDAA /* Pods-LBNTableViewHandle_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		435477DAC7B43E7D4ABA30D1BAE07EA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F37E2C2304FA2163255EB5E8882FC26 /* LBNTableViewHandle.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F508FCB33495BCB8358006D50C8CD1F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		08BD31351BC1B6B92C47D731241A5232 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				054CED88317D8D8F91A0DB7240A570CD /* LBNTableViewHandle-dummy.m in Sources */,
+				1EFDB846035A951B5C736D9111A84E28 /* ReplaceMe.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC5301FD274B1EF393F5AF3CFFED458D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B500627C046ABF307688BBA34999AEC0 /* Pods-LBNTableViewHandle_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA9C54A436529181D1CE42E4C82610BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1FF64AA108B714FBF37CE00E3D21F481 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LBNTableViewHandle-LBNTableViewHandle";
+			target = DA1858147E8F2BE16DF9E0E354251DFA /* LBNTableViewHandle-LBNTableViewHandle */;
+			targetProxy = B291995F8264268EBFBFA327652EE8DB /* PBXContainerItemProxy */;
+		};
+		877B7F86FA59EF3983598408A114045D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LBNTableViewHandle;
+			target = 8E5E0BF4675AE2D2578CA63BE7396311 /* LBNTableViewHandle */;
+			targetProxy = 280BCB54EBABCF485833A43F9479B013 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		03CA91998D6773EC5D02B3DB87B8353E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		081F69DCB1F04BA27AAA2F25E67EF71C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C48DEB3A617B4C539144D543EA88F1A /* LBNTableViewHandle-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LBNTableViewHandle/LBNTableViewHandle-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LBNTableViewHandle/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LBNTableViewHandle/LBNTableViewHandle.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = LBNTableViewHandle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		5047F754194954B47610FF2867025B22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C48DEB3A617B4C539144D543EA88F1A /* LBNTableViewHandle-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LBNTableViewHandle/LBNTableViewHandle-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LBNTableViewHandle/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LBNTableViewHandle/LBNTableViewHandle.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = LBNTableViewHandle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A89B3B371193D4202F769A16E0E1770B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C48DEB3A617B4C539144D543EA88F1A /* LBNTableViewHandle-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = LBNTableViewHandle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		BEF923C1C8272414FB6F21D81E74B689 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C48DEB3A617B4C539144D543EA88F1A /* LBNTableViewHandle-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = LBNTableViewHandle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		D7330348FEA7DF7F836704CA13CFA3EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4BDE83CABE76ED0F25EC39FC57B4532 /* Pods-LBNTableViewHandle_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LBNTableViewHandle_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-LBNTableViewHandle_Tests/Pods-LBNTableViewHandle_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_LBNTableViewHandle_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F92DA6577300F051EFD525B939855C75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C8C3A2C5E6923D3DDF44A1C85E2264C /* Pods-LBNTableViewHandle_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LBNTableViewHandle_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-LBNTableViewHandle_Tests/Pods-LBNTableViewHandle_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_LBNTableViewHandle_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AC44A253DE1988D558BF5058512A5F4 /* Build configuration list for PBXNativeTarget "LBNTableViewHandle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				081F69DCB1F04BA27AAA2F25E67EF71C /* Debug */,
+				5047F754194954B47610FF2867025B22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */,
+				03CA91998D6773EC5D02B3DB87B8353E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E51B089F6D3A30CF9EEE1848E36BBB32 /* Build configuration list for PBXNativeTarget "LBNTableViewHandle-LBNTableViewHandle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEF923C1C8272414FB6F21D81E74B689 /* Debug */,
+				A89B3B371193D4202F769A16E0E1770B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA898F20621076256FFF7DF661BB525A /* Build configuration list for PBXNativeTarget "Pods-LBNTableViewHandle_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F92DA6577300F051EFD525B939855C75 /* Debug */,
+				D7330348FEA7DF7F836704CA13CFA3EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

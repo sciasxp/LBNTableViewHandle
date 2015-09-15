@@ -1,0 +1,14 @@
+PODS:
+  - LBNTableViewHandle (0.1.0)
+
+DEPENDENCIES:
+  - LBNTableViewHandle (from `../`)
+
+EXTERNAL SOURCES:
+  LBNTableViewHandle:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LBNTableViewHandle: 7fa625ed59f5aba64774a06e7a1df534208fca04
+
+COCOAPODS: 0.38.2

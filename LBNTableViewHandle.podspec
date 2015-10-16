@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { "Luciano Bastos Nunes" => "sciasxp@gmail.com" }
   s.source           = { :git => "https://github.com/sciasxp/LBNTableViewHandle.git", :tag => s.version.to_s }
-  s.social_media_url = 'br.linkedin.com/pub/luciano-bastos-nunes/16/712/695/'
+#  s.social_media_url = 'br.linkedin.com/pub/luciano-bastos-nunes/16/712/695/'
 
   s.platform     = :ios, '7.1'
   s.requires_arc = true

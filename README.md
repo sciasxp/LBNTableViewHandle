@@ -56,7 +56,7 @@ OBS: Everything in between "<>" are instructions and have to be replaced by your
 ```objective-c
 #import LBNTableViewHandle.h
 
-@interface MainTableViewController ()
+@interface MainViewController ()
 	@property (nonatomic, week) IBOutlet UITableView *mainTableView;
 	@property (nonatomic, strong) LBNTableViewHandle *mainTableViewHandle;
 @end

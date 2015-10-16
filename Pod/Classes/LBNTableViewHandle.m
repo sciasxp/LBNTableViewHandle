@@ -1,14 +1,14 @@
 //
-//  TableViewDataSource.m
+//  TableViewDataHandler.m
 //  Dicas GP
 //
 //  Created by Luciano Bastos Nunes on 04/09/14.
 //  Copyright (c) 2014 Tap4Mobile. All rights reserved.
 //
 
-#import "TableViewDataSource.h"
+#import "LBNTableViewHandle.h"
 
-@interface TableViewDataSource ()
+@interface LBNTableViewHandle ()
 
 @property (nonatomic, strong) void (^configureCellBlock) (id, NSDictionary *, NSIndexPath *);
 @property (nonatomic, strong) void (^deleteCellBlock) (UITableView *, NSIndexPath *, NSDictionary *);
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation TableViewDataSource
+@implementation LBNTableViewHandle
 
 - (instancetype)initWithItems:(NSArray *)items
                 CellIdentifier:(NSString * (^)(id item))cellIdentifier

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
+@interface LBNTableViewHandle : NSObject <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @property (nonatomic, strong) NSArray *items;
 

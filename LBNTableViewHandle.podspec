@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
                         This pod encapsulate the methods of UITableViewDataSource and UITableViewDelegate, so you can concentrate on the logic instead of the boiler plate code.
-                        The use of this pod make uses of blocks to make your code simpler and more readable.
+                        This pod make use of blocks to make your code simpler and more readable.
                        DESC
 
   s.homepage         = "https://github.com/sciasxp/LBNTableViewHandle"

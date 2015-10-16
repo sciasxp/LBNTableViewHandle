@@ -7,8 +7,8 @@
 
 ## Installation
 
-LBNTableViewHandle is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+LBNTableViewHandle is available through CocoaPods](http://cocoapods.org). To install
+simply add the following line to your Podfile:
 
 ```ruby
 pod "LBNTableViewHandle"
@@ -18,19 +18,19 @@ pod "LBNTableViewHandle"
 
 Include the file LBNTableViewHandle.h in your class:
 ```objective-c
-#include LBNTableViewHandle.h
+#import LBNTableViewHandle.h
 ```
 
-After that you need to create a global property to keed the reference that can be made this way:
+After including LBNTableViewHandle.h in the class you will use it, you need to create a global property to keep reference to LBNTableViewHndle instance that can be made this way:
 ```objective-c
 @property (nonatomic, strong) LBNTableViewHandle *mainTableViewHandle;
 ```
 
-And this is how you use it:
+And this is how you can use it:
 ```objective-c
 self.mainTableViewHandle = [[LBNTableViewHandle alloc] initWithItems:<NSARRAY WITH THE ITENS TO BE SHOWN IN THE TABLE VIEW> CellIdentifier:^NSString *(id item) {
 
-return <RETURN CELL IDENTIFIER FOR AN ITEM>;
+return <RETURN CELL IDENTIFIER,	AS IN YOUR TABLEVIEWCELL AT STORYBOARD, FOR AN ITEM>;
 
 } ConfigureCell:^(id cell, id item, NSIndexPath *indexPath) {
 
@@ -49,10 +49,53 @@ return <RETURN CELL HEIGHT FOR AN ITEM>;
 self.mainTableView.dataSource = self.mainTableViewHandle;
 self.mainTableView.delegate = self.mainTableViewHandle;
 ```
+OBS: Everything in between "<>" are instructions and have to be replaced by your code.
+
+## Usage Example
+
+```objective-c
+#import LBNTableViewHandle.h
+
+@interface MainTableViewController ()
+	@property (nonatomic, week) IBOutlet UITableView *mainTableView;
+	@property (nonatomic, strong) LBNTableViewHandle *mainTableViewHandle;
+@end
+
+@implementation MainViewController
+
+- (void)viewDidLoad {
+
+	self.mainTableViewHandle = [[LBNTableViewHandle alloc] initWithItems:@[@"Title 1", @"Title 2"] CellIdentifier:^NSString *(id item) {
+
+		return @"MyCellIdentifier";
+
+	} ConfigureCell:^(id cell, id item, NSIndexPath *indexPath) {
+
+		UITableViewCell *cell = cell;
+		cell.title = item[indexPath.row];
+
+	} DeleteCell:nil HeightForItem:^CGFloat(id item) {
+
+		return 44;
+
+	} DidSelect:^(NSIndexPath *indexPath, id item) {
+
+		[tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+	}];
+
+	self.mainTableView.dataSource = self.mainTableViewHandle;
+	self.mainTableView.delegate = self.mainTableViewHandle;
+}
+
+@end
+
+
+```
 
 ## Observations
 
-You can use this class to simplefy your code in case you need to use tableview inside another tableview. Simple crete to instances of LBNTableViewHandle and attibute then to the respective table datasource and delegate.
+You can use this class to simplefy your code in case you need to use a tableview inside another tableview. Simply crete an instances of LBNTableViewHandle and attibute then to the respective table datasources and delegates.
 
 ## Author
 

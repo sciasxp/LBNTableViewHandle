@@ -13,6 +13,23 @@ simply add the following line to your Podfile:
 ```ruby
 pod "LBNTableViewHandle"
 ```
+## Whats new from version 0.0.3 to 0.1.0
+
+Now you can pass an NSDictionary as item. And that dictionary may have multiple sections to it.
+
+The default format for dictionary is:
+```objective-c
+@{@"sections":
+    @[
+        @{@"headerConfig":@{},
+         @"items":@[id, id]
+        }
+    ]
+};
+```
+
+###OBS
+The old way to use this class passing a NSArray is still valid.
 
 ## Usage
 
@@ -28,7 +45,7 @@ After including LBNTableViewHandle.h in the class you will use it, you need to c
 
 And this is how you can use it:
 ```objective-c
-self.mainTableViewHandle = [[LBNTableViewHandle alloc] initWithItems:<NSARRAY WITH THE ITENS TO BE SHOWN IN THE TABLE VIEW> CellIdentifier:^NSString *(id item) {
+self.mainTableViewHandle = [[LBNTableViewHandle alloc] initWithItems:<NSARRAY WITH THE ITENS TO BE SHOWN IN THE TABLE VIEW OR A NSDICTIONARY WITH THE ABOVE FORMAT> CellIdentifier:^NSString *(id item) {
 
 return <RETURN CELL IDENTIFIER,	AS IN YOUR TABLEVIEWCELL AT STORYBOARD, FOR AN ITEM>;
 
@@ -43,6 +60,18 @@ return <RETURN CELL HEIGHT FOR AN ITEM>;
 } DidSelect:^(NSIndexPath *indexPath, id item) {
 
 <WHAT TO DO WHEN A ITEM IS SELECTED IN THE LIST>
+
+} ViewForSectionHeader:^UIView *(NSInteger section, id item) {
+
+<CREATE AND RETURN THE VIEW THAT WILL BE A HEADER FOR THIS SECTION>
+
+OBS: <<item>> is the content of headerConfig key
+
+} HeightForHeader:^CGFloat(NSInteger section, id item) {
+
+<RETURN THE HEIGHT FOR THIS SECTIONS HEADER>
+
+OBS: <<item>> is the content of headerConfig key
 
 }];
 
@@ -65,7 +94,16 @@ OBS: Everything in between "<>" are instructions and have to be replaced by your
 
 - (void)viewDidLoad {
 
-	self.mainTableViewHandle = [[LBNTableViewHandle alloc] initWithItems:@[@"Title 1", @"Title 2"] CellIdentifier:^NSString *(id item) {
+    NSDictionary *sections = 
+    @{@"sections":
+        @[
+            @{@"headerConfig":@{@"title":@"Novidades"},
+            @"items":@[@"Title 1", @"Title 2"]
+            }
+        ]
+    };
+
+	self.mainTableViewHandle = [[LBNTableViewHandle alloc] initWithItems:sections CellIdentifier:^NSString *(id item) {
 
 		return @"MyCellIdentifier";
 
@@ -80,10 +118,29 @@ OBS: Everything in between "<>" are instructions and have to be replaced by your
 
 	} DidSelect:^(NSIndexPath *indexPath, id item) {
 
-		[tableView deselectRowAtIndexPath:indexPath animated:YES];
+		
 
-	}];
+    } ViewForSectionHeader:^UIView *(NSInteger section, id item) {
 
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.mainTableView.frame.size.width, 24)];
+
+        /* Create custom view to display section header... */
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, self.mainTableView.frame.size.width, 18)];
+        [label setFont:[UIFont boldSystemFontOfSize:12]];
+        NSString *string = item[@"title"];
+
+        [label setText:string];
+        [view addSubview:label];
+        [view setBackgroundColor:[UIColor colorWithRed:166/255.0 green:177/255.0 blue:186/255.0 alpha:1.0]]; //your background color...
+
+        return view;
+
+    } HeightForHeader:^CGFloat(NSInteger section, id item) {
+
+        return 30.0f;
+    }];
+    
+    self.enableDeselectOnDidSelect = YES;
 	self.mainTableView.dataSource = self.mainTableViewHandle;
 	self.mainTableView.delegate = self.mainTableViewHandle;
 }

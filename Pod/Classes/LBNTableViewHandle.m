@@ -1,6 +1,5 @@
 //
 //  TableViewDataHandler.m
-//  Dicas GP
 //
 //  Created by Luciano Bastos Nunes on 04/09/14.
 //  Copyright (c) 2014 Tap4Mobile. All rights reserved.
@@ -15,17 +14,25 @@
 @property (nonatomic, strong) NSString * (^cellIdentifierForItem) (id);
 @property (nonatomic, strong) CGFloat (^heightForItem) (id);
 @property (nonatomic, strong) void (^didSelectCellBlock) (NSIndexPath *, id);
-
+@property (nonatomic, strong) UIView * (^viewForHeader)(NSInteger, id);
+@property (nonatomic, strong) CGFloat (^heightForHeader) (NSInteger, id);
 @end
+
+/*
+ NSDictionary *sections = @{@"sections":@[@{@"headerConfig":@{},
+ @"items":@[@"item 1", @"item 2"]}]};
+ */
 
 @implementation LBNTableViewHandle
 
-- (instancetype)initWithItems:(NSArray *)items
-                CellIdentifier:(NSString * (^)(id item))cellIdentifier
+- (instancetype)initWithItems:(id<NSFastEnumeration>)items
+               CellIdentifier:(NSString * (^)(id item))cellIdentifier
                 ConfigureCell:(void (^)(id cell, id item, NSIndexPath *indexPath))configureCellBlock
-                DeleteCell:(void (^)(UITableView *tableView, NSIndexPath *indexPath, id item))deleteCellBlock
+                   DeleteCell:(void (^)(UITableView *tableView, NSIndexPath *indexPath, id item))deleteCellBlock
                 HeightForItem:(CGFloat (^)(id item))heightCellBlock
-                DidSelect:(void (^)(NSIndexPath *indexPath, id item))didSelectCellBlock
+                    DidSelect:(void (^)(NSIndexPath *indexPath, id item))didSelectCellBlock
+         ViewForSectionHeader:(UIView * (^)(NSInteger section, id item))viewForSectionHeader
+              HeightForHeader:(CGFloat (^)(NSInteger, id))heightForHeader
 {
     self = [super init];
     
@@ -37,6 +44,8 @@
         _deleteCellBlock = deleteCellBlock;
         _heightForItem = heightCellBlock;
         _didSelectCellBlock = didSelectCellBlock;
+        _viewForHeader = viewForSectionHeader;
+        _heightForHeader = heightForHeader;
     }
     
     return self;
@@ -44,7 +53,7 @@
 
 - (instancetype)init {
     
-    self = [self initWithItems:nil CellIdentifier:nil ConfigureCell:nil DeleteCell:nil HeightForItem:nil DidSelect:nil];
+    self = [self initWithItems:nil CellIdentifier:nil ConfigureCell:nil DeleteCell:nil HeightForItem:nil DidSelect:nil ViewForSectionHeader:nil HeightForHeader:nil];
     
     return self;
 }
@@ -53,14 +62,53 @@
 
 - (id)itemAtIndexPath:(NSIndexPath*)indexPath {
     
-    return self.items[(NSUInteger)indexPath.row];
+    if ([(NSObject *)self.items isKindOfClass:[NSArray class]]) {
+        
+        return self.items[indexPath.row];
+        
+    } else {
+        
+        return self.items[@"sections"][indexPath.section][@"items"][indexPath.row];
+    }
 }
 
 #pragma mark - TableViewDataSource
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    
+    if (self.viewForHeader) {
+        
+        id item = self.items[@"sections"][section][@"headerConfig"];
+        
+        if ([[item allKeys] count]) {
+            
+            UIView *view = self.viewForHeader(section, item);
+            
+            return view;
+        }
+    }
+    
+    return nil;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    if ([(NSObject *)self.items isKindOfClass:[NSArray class]]) {
+        
+        return 1;
+    }
+    
+    return [self.items[@"sections"] count];
+}
+
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.items.count;
+    if ([(NSObject *)self.items isKindOfClass:[NSArray class]]) {
+        
+        return [(NSArray *)self.items count];
+    }
+    
+    return [self.items[@"sections"][section][@"items"] count];
 }
 
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
@@ -82,12 +130,12 @@
 }
 
 //- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-//    
+//
 //    if (editingStyle == UITableViewCellEditingStyleDelete) {
 //        // Delete the row from the data source
-//        
+//
 //        if (self.deleteCellBlock) {
-//            
+//
 //            self.deleteCellBlock(tableView, indexPath, (self.items)[indexPath.row]);
 //        }
 //    }
@@ -107,7 +155,21 @@
         id item = [self itemAtIndexPath:indexPath];
         
         height = self.heightForItem(item);
+        
+    }
     
+    return height;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    
+    CGFloat height = 0.0f;
+    
+    NSDictionary *item = self.items[@"sections"][section][@"headerConfig"];
+    
+    if (self.heightForHeader) {
+        
+        height = self.heightForHeader(section, item);
     }
     
     return height;
@@ -115,7 +177,10 @@
 
 - (void)tableView:(nonnull UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (self.enableDeselectOnDidSelect) {
+        
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
     
     if (self.didSelectCellBlock) {
         
@@ -127,45 +192,45 @@
 
 #pragma mark - SearchBar Delegate Methods
 /*
--(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    [self filterContentForSearchText:searchText];
-}
-
--(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-    searchBar.text = @"";
-    tableViewData = [originalTableViewData mutableCopy];
-    [self.myTableView reloadData];
-    
-    [searchBar resignFirstResponder];
-}
-
--(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
-    [searchBar resignFirstResponder];
-}
-
-- (void)filterContentForSearchText:(NSString *)searchText {
-    if (searchText && searchText.length) {
-        [tableViewData removeAllObjects];
-        
-        for (NSDictionary *dictionary in originalTableViewData)
-        {
-            for (NSString *thisKey in [dictionary allKeys]) {
-                if ([thisKey isEqualToString:@"SearchKey1"] ||
-                    [thisKey isEqualToString:@"SearchKey2"] ) {
-                    
-                    if ([[dictionary valueForKey:thisKey] rangeOfString:searchText
-                                                                options:NSCaseInsensitiveSearch].location != NSNotFound) {
-                        [tableViewData addObject:dictionary];
-                    } // for (NSString *thisKey in allKeys)
-                    
-                } // if ([thisKey isEqualToString:@"SearchKey1"] || ...
-            } // for (NSString *thisKey in [dictionary allKeys])
-        } // for (NSDictionary *dictionary in originalTableViewData)
-        
-        [self.myTableView reloadData];
-        
-    } // if (query && query.length)
-}
-*/
+ -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+ [self filterContentForSearchText:searchText];
+ }
+ 
+ -(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+ searchBar.text = @"";
+ tableViewData = [originalTableViewData mutableCopy];
+ [self.myTableView reloadData];
+ 
+ [searchBar resignFirstResponder];
+ }
+ 
+ -(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+ [searchBar resignFirstResponder];
+ }
+ 
+ - (void)filterContentForSearchText:(NSString *)searchText {
+ if (searchText && searchText.length) {
+ [tableViewData removeAllObjects];
+ 
+ for (NSDictionary *dictionary in originalTableViewData)
+ {
+ for (NSString *thisKey in [dictionary allKeys]) {
+ if ([thisKey isEqualToString:@"SearchKey1"] ||
+ [thisKey isEqualToString:@"SearchKey2"] ) {
+ 
+ if ([[dictionary valueForKey:thisKey] rangeOfString:searchText
+ options:NSCaseInsensitiveSearch].location != NSNotFound) {
+ [tableViewData addObject:dictionary];
+ } // for (NSString *thisKey in allKeys)
+ 
+ } // if ([thisKey isEqualToString:@"SearchKey1"] || ...
+ } // for (NSString *thisKey in [dictionary allKeys])
+ } // for (NSDictionary *dictionary in originalTableViewData)
+ 
+ [self.myTableView reloadData];
+ 
+ } // if (query && query.length)
+ }
+ */
 
 @end

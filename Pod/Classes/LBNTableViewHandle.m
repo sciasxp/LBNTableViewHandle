@@ -163,6 +163,11 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     
+    if ([(NSObject *)self.items isKindOfClass:[NSArray class]]) {
+        
+        return 0;
+    }
+    
     CGFloat height = 0.0f;
     
     NSDictionary *item = self.items[@"sections"][section][@"headerConfig"];
